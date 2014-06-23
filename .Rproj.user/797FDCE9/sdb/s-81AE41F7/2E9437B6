@@ -1,0 +1,16 @@
+{
+    "contents" : "---\ntitle       : Voter Age Distributions in Beirut\nauthor      : Marc Farra\njob         : https://github.com/kamicut\nframework   : io2012        # {io2012, html5slides, shower, dzslides, ...}\nhighlighter : highlight.js  # {highlight.js, prettify, highlight}\nhitheme     : tomorrow      # \nwidgets     : []            # {mathjax, quiz, bootstrap}\nmode        : selfcontained # {standalone, draft}\nknit        : slidify::knit2slides\n\n---\n\n\n## Background\n\nThere are diverse groups in Lebanon that can affect the age distribution of voters. This is due to the dynamics of the 1975 Lebanese Civil War. We propose to create a Shiny App to show a comparison of these groups.\n\nThe app will contain:\n- A checkbox selector to combine different groups \n- The density of the age distribution of each group\n- The mean and median of the total selected population\n\n--- \n\n## Sample plot\n\n\n```{r fig.height = 6, fig.width=10, fig.align = 'center', message = F}\nrequire(ggplot2)\nbey <- read.csv(\"bey.csv\")\nqplot(age, color=factor(labels), data=bey, geom=\"density\", adjust=2)\n```\n\n--- \n\n## Analysis\n\nWe can see that each voter groups has different population density plots. Thus it would be interesting to see the effect of each group on the total electors by either including them or excluding them from the total.\n\nThe Shiny App is found [here](http://kamicut.shinyapps.io/project)\n\n--- \n\n## References\n\nThe data is parsed and translated from [Lebanon Election Data Analysis](http://lebanonelectiondata.org), a project by the Lebanese Association for Democratic Elections.\n\n\n\n\n",
+    "created" : 1403562669031.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2403278285",
+    "id" : "2E9437B6",
+    "lastKnownWriteTime" : 1403564642,
+    "path" : "~/Documents/coursera/DataScience/09_DevelopingDataProducts/age-distribution/index.Rmd",
+    "project_path" : "index.Rmd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
